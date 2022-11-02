@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="name">
+  <h1>학생 정보 입력</h1>
+</div>
+<form action="form_ok.jsp" method="post">
+
+  <label for="sname">학생 이름:</label>
+  <input type="text" id="sname" name="sname"><br><br>
+
+  <label for="phone">전화번호:</label><br><br>
+  <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required><br><br>
+  <small>Format: 010-1234-5678</small><br><br>
+
+  <label for="email">email:</label>
+  <input type="email" id="email" name="email"><br><br>
+
+  <label for="RC">기숙사:</label>
+  <select id="RC" name="RC">
+    <option value="손양원">손양원</option>
+    <option value="토레이">토레이</option>
+    <option value="장기려">장기려</option>
+    <option value="카이퍼">카이퍼</option>
+    <option value="열송학사">열송학사</option>
+    <option value="카마이클">카마이클</option>
+  </select><br><br>
+
+  <label for="major">전공:</label>
+  <select id="major" name="major">
+    <option value="글로벌 리더십학부 (GLS)">글로벌 리더십학부 (GLS)</option>
+    <option value="국제어문학부">국제어문학부</option>
+    <option value="경영경제학부">경영경제학부</option>
+    <option value="법학부">법학부</option>
+    <option value="커뮤니케이션학부">커뮤니케이션학부</option>
+    <option value="공간환경시스템공학부">공간환경시스템공학부</option>
+    <option value="기계제어공학부">기계제어공학부</option>
+    <option value="콘텐츠융합디자인학부">콘텐츠융합디자인학부</option>
+    <option value="생명과학부">생명과학부</option>
+    <option value="전산전자공학부">전산전자공학부</option>
+    <option value="상담심리사회복지학부">상담심리사회복지학부</option>
+    <option value="ICT창업학부">ICT창업학부</option>
+  </select><br><br>
+
+  <label for="birth">birthday</label>
+  <input type="date" id="birth" name="birth"><br><br>
+
+  <label>gender</label>
+  <input type="radio" id="man" name="gender" value="man">
+  <label for="man">MAN</label>
+  <input type="radio" id="woman" name="gender" value="woman">
+  <label for="woman">WOMAN</label><br><br>
+
+  <label>grade</label>
+  <input type="radio" id="1st" name="grade" value="1학년">
+  <label for="1st">1학년</label>
+  <input type="radio" id="2nd" name="grade" value="2학년">
+  <label for="woman">2학년</label>
+  <input type="radio" id="3rd" name="grade" value="3학년">
+  <label for="3rd">3학년</label>
+  <input type="radio" id="4th" name="grade" value="4학년">
+  <label for="4th">4학년</label><br><br>
+
+
+  <label>수업 듣는 건물</label>
+  <input type="checkbox" id="building1" name="building[]" value="NHM">
+  <label for="building1"> NHM </label>
+  <input type="checkbox" id="building2" name="building[]" value="HDH">
+  <label for="building2"> HDH </label>
+  <input type="checkbox" id="building3" name="building[]" value="OH">
+  <label for="building3"> OH </label>
+  <input type="checkbox" id="building4" name="building[]" value="NTH">
+  <label for="building1"> NTH </label>
+  <input type="checkbox" id="building5" name="building[]" value="ANH">
+  <label for="building2"> ANH </label>
+  <input type="checkbox" id="building6" name="building[]" value="CSH">
+  <label for="building3"> CSH </label><br><br>
+
+  <p>간단한 자기소개.</p>
+  <textarea name="message" rows="10" cols="30">저의 21살입니다.</textarea><br><br>
+
+  <input type="submit"><br>
+</form>
+</body>
+</html>
