@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.lang.reflect.Array" %>
+<%@ page import="java.util.Arrays" %><%--
   Created by IntelliJ IDEA.
   User: seominjae
   Date: 2022/11/02
@@ -7,7 +8,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String name=request.getParameter("smae");
+    request.setCharacterEncoding("UTF-8");
+    String name=request.getParameter("sname");
     String ph=request.getParameter("phone");
     String em=request.getParameter("email");
     String rc=request.getParameter("RC");
@@ -15,21 +17,12 @@
     String birth=request.getParameter("birth");
     String gender=request.getParameter("gender");
     String gr=request.getParameter("grade");
-    String build=request.getParameter("building");
+    String build[] = request.getParameterValues("building[]");
+    String bud= Arrays.toString(build);
 
     String text=request.getParameter("message");
 
 %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +41,7 @@
 <div>생년월일: <%=birth%></div>
 <div>성별: <%=gender%></div>
 <div>학년: <%=gr%></div>
-<div>수업 듣는 건물들: <%=build%></div>
+<div>수업 듣는 건물들: <%=bud%></div>
 <div>자기소개: <%=text%></div>
 
 </body>

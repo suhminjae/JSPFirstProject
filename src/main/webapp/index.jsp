@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="form.html">Hello Servlet</a>
+<a href="form.html">정보 입력하기</a>
 </body>
 </html>
